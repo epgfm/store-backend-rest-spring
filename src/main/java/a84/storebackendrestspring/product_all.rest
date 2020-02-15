@@ -1,0 +1,36 @@
+GET
+http://localhost:9009/products/all
+
+%%%
+
+# Duration: 953 ms
+# URL: http://localhost:9009/products/all
+
+# HTTP/1.1 200
+
+@Content-Type: application/json
+@Transfer-Encoding: chunked
+@Date: Fri, 14 Feb 2020 10:00:51 GMT
+@Keep-Alive: timeout=60
+@Connection: keep-alive
+
+[
+  {
+    "productId": 1,
+    "name": "AcerV-6",
+    "price": 105.0,
+    "description": "Screen"
+  },
+  {
+    "productId": 2,
+    "name": "Brix NUC",
+    "price": 300.6,
+    "description": "Mini-pc"
+  },
+  {
+    "productId": 3,
+    "name": "Concrad RX7",
+    "price": 10.2,
+    "description": "Cat7 Cable"
+  }
+]

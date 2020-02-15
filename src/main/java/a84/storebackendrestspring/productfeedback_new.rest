@@ -1,0 +1,31 @@
+POST
+http://localhost:9009/productsfeedback/add
+@Content-Type: application/json
+{
+    "product": { "productId": 1 },
+    "feedback": "test again lol"
+}
+
+%%%
+
+# Duration: 159 ms
+# URL: http://localhost:9009/productsfeedback/add
+
+# HTTP/1.1 200
+
+@Content-Type: application/json
+@Transfer-Encoding: chunked
+@Date: Fri, 14 Feb 2020 10:01:35 GMT
+@Keep-Alive: timeout=60
+@Connection: keep-alive
+
+{
+  "productFeedbackId": 10,
+  "product": {
+    "productId": 1,
+    "name": null,
+    "price": 0.0,
+    "description": null
+  },
+  "feedback": "test again lol"
+}
