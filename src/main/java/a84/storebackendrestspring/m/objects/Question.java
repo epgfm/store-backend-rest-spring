@@ -1,14 +1,16 @@
 package a84.storebackendrestspring.m.objects;
 
 import a84.storebackendrestspring.m.QuestionType;
+import com.fasterxml.jackson.annotation.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Question {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int questionId;
 
     private String text;
@@ -24,8 +26,11 @@ public class Question {
 
     private double points;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "quizz_id")
+    @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "quizzId")
+    @JsonIdentityReference(alwaysAsId = true)
+    @NotNull
     private Quizz quizz;
 
     public Question() {

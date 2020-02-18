@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class QuizzUser {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
     private int accessLevel;
     private String name;

@@ -1,0 +1,32 @@
+POST
+http://localhost:9009/question/add
+@Content-Type: application/json
+
+  {
+    "text": "What is S's email address?",
+    "type": "TEXT_EXACT",
+    "points": 5.0,
+    "quizz": {
+      "quizzId": 1
+    }
+  }
+%%%
+
+# Duration: 61 ms
+# URL: http://localhost:9009/question/add
+
+# HTTP/1.1 200
+
+@Content-Type: application/json
+@Transfer-Encoding: chunked
+@Date: Tue, 18 Feb 2020 10:41:54 GMT
+@Keep-Alive: timeout=60
+@Connection: keep-alive
+
+{
+  "questionId": 5,
+  "text": "What is S's email address?",
+  "type": "TEXT_EXACT",
+  "points": 5.0,
+  "quizz": 1
+}

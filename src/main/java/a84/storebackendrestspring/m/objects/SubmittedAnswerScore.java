@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class SubmittedAnswerScore {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int submittedAnswerScoreId;
 
 
