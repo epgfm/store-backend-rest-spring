@@ -3,8 +3,6 @@ package a84.storebackendrestspring;
 import a84.storebackendrestspring.m.QuestionType;
 import a84.storebackendrestspring.m.daos.*;
 import a84.storebackendrestspring.m.objects.*;
-import a84.storebackendrestspring.m.store.ProductDAO;
-import a84.storebackendrestspring.m.store.ProductFeedbackDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
