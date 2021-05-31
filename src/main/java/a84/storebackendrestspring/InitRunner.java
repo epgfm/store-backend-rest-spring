@@ -27,44 +27,44 @@ public class InitRunner implements CommandLineRunner {
 
     public void run(String[] args) {
 
-//        QuizzUser u = new QuizzUser();
-//        u.setEmail("recon@s6n.org");
-//        u.setName("ouroumov");
-//        u.setHashedPassword("lolhash");
-//        u.setSalt("salthash");
-//        quizzUserDAO.save(u);
-//
-//        Quizz qz = new Quizz();
-//        qz.setName("Hello World!");
-//        qz.setDescription("A first quizz to warm this shit up.");
-//        quizzDAO.save(qz);
-//
-//        Question q = new Question();
-//        q.setText("What is E's email address?");
-//        q.setType(QuestionType.TEXT_EXACT);
-//        q.setQuizz(qz);
-//        q.setPoints(5.0);
-//        questionDAO.save(q);
-//
-//        Answer a = new Answer();
-//        a.setText("etienne.papegnies@avenir-84.org");
-//        a.setQuestion(q);
-//        a.setTruthValue(true);
-//        answerDAO.save(a);
-//
-//        Submission s = new Submission();
-//        s.setQuizz(qz);
-//        s.setQuizzUser(u);
-//        submissionDAO.save(s);
-//
-//        SubmittedAnswer sa = new SubmittedAnswer();
-//        sa.setAnswer(a);
-//        sa.setSubmission(s);
-//        answerInstanceDAO.save(sa);
-//
-//        SubmissionScore sc = new SubmissionScore();
-//        sc.setSubmission(s);
-//        submissionScoreDAO.save(sc);
+        QuizzUser u = new QuizzUser();
+        u.setEmail("recon@s6n.org");
+        u.setName("ouroumov");
+        u.setHashedPassword("lolhash");
+        u.setSalt("salthash");
+        quizzUserDAO.save(u);
+
+        Quizz qz = new Quizz();
+        qz.setName("Hello World!");
+        qz.setDescription("A first quizz to warm this shit up.");
+        quizzDAO.save(qz);
+
+        Question q = new Question();
+        q.setText("What is E's email address?");
+        q.setType(QuestionType.TEXT_EXACT);
+        q.setQuizz(qz);
+        q.setPoints(5.0);
+        questionDAO.save(q);
+
+        Answer a = new Answer();
+        a.setText("etienne.papegnies@avenir-84.org");
+        a.setQuestion(q);
+        a.setTruthValue(true);
+        answerDAO.save(a);
+
+        Submission s = new Submission();
+        s.setQuizz(qz);
+        s.setQuizzUser(u);
+        submissionDAO.save(s);
+
+        SubmittedAnswer sa = new SubmittedAnswer();
+        sa.setAnswer(a);
+        sa.setSubmission(s);
+        answerInstanceDAO.save(sa);
+
+        SubmissionScore sc = new SubmissionScore();
+        sc.setSubmission(s);
+        submissionScoreDAO.save(sc);
 
     }
 

@@ -2,7 +2,6 @@ package a84.storebackendrestspring;
 
 import a84.storebackendrestspring.m.daos.*;
 import a84.storebackendrestspring.m.objects.*;
-import a84.storebackendrestspring.m.store.ProductFeedback;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
