@@ -13,11 +13,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class InitRunner implements CommandLineRunner {
 
     @Autowired
-    ProductDAO productDAO;
-    @Autowired
-    ProductFeedbackDAO productFeedbackDAO;
-
-    @Autowired
     QuizzUserDAO quizzUserDAO;
     @Autowired
     QuizzDAO quizzDAO;

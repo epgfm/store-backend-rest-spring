@@ -1,0 +1,7 @@
+DROP DATABASE IF EXISTS q;
+
+CREATE DATABASE q;
+
+CREATE USER IF NOT EXISTS 'q'@'localhost' IDENTIFIED BY 'lolwoot';
+
+GRANT ALL ON `q`.* TO 'q'@'localhost';
