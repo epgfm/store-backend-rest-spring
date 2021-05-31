@@ -66,35 +66,6 @@ public class InitRunner implements CommandLineRunner {
 //        sc.setSubmission(s);
 //        submissionScoreDAO.save(sc);
 
-//
-//        System.out.println("[Start] Preloading database.");
-//        Product[] products = new Product[] {
-//            new Product("AcerV-6", 105, "Screen"),
-//            new Product("Brix NUC", 300.6, "Mini-pc"),
-//            new Product("Concrad RX7", 10.2, "Cat7 Cable")
-//        };
-//        for (int i = 0; i < products.length; i++)
-//            products[i] = productDAO.save(products[i]);
-//        System.out.println("[Done] Preloading database.");
-//
-//        System.out.println("[Start] Adding feedbacks.");
-//        for (int i = 0; i < products.length; i++) {
-//            ProductFeedback[] pfs = new ProductFeedback[] {
-//                    new ProductFeedback(
-//                            products[i],
-//                            "This " + products[i].getName() + " is great shit"
-//                    ),
-//                    new ProductFeedback(
-//                            products[i],
-//                            "Meh " + products[i].getName() + " sucks"
-//                    ),
-//            };
-//            for (ProductFeedback pf: pfs)
-//                productFeedbackDAO.save(pf);
-//        }
-//        System.out.println("[Done] Adding feedbacks.");
-
-
     }
 
 }
