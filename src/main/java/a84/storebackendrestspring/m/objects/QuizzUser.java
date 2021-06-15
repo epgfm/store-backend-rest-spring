@@ -12,21 +12,23 @@ public class QuizzUser {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
     private int accessLevel;
-    private String name;
+    private String userName;
     private String email;
     private String hashedPassword;
-    private String salt;
+    private boolean active;
+    private String roles;
+
+
 
     public QuizzUser() {
     }
 
-    public QuizzUser(int userId, int accessLevel, String name, String email, String hashedPassword, String salt) {
+    public QuizzUser(int userId, int accessLevel, String userName, String email, String hashedPassword, String salt) {
         this.userId = userId;
         this.accessLevel = accessLevel;
-        this.name = name;
+        this.userName = userName;
         this.email = email;
         this.hashedPassword = hashedPassword;
-        this.salt = salt;
     }
 
     public int getAccessLevel() {
@@ -45,12 +47,12 @@ public class QuizzUser {
         this.userId = userId;
     }
 
-    public String getName() {
-        return name;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getEmail() {
@@ -69,12 +71,20 @@ public class QuizzUser {
         this.hashedPassword = hashedPassword;
     }
 
-    public String getSalt() {
-        return salt;
+    public boolean isActive() {
+        return active;
     }
 
-    public void setSalt(String salt) {
-        this.salt = salt;
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public String getRoles() {
+        return roles;
+    }
+
+    public void setRoles(String roles) {
+        this.roles = roles;
     }
 
 
@@ -83,10 +93,9 @@ public class QuizzUser {
         return "QuizzUser{" +
                 "userId=" + userId +
                 ", accessLevel=" + accessLevel +
-                ", name='" + name + '\'' +
+                ", name='" + userName + '\'' +
                 ", email='" + email + '\'' +
                 ", hashedPassword='" + hashedPassword + '\'' +
-                ", salt='" + salt + '\'' +
                 '}';
     }
 }

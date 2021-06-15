@@ -6,6 +6,7 @@ import a84.storebackendrestspring.m.objects.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 
 @SpringBootApplication
 public class InitRunner implements CommandLineRunner {
@@ -29,9 +30,11 @@ public class InitRunner implements CommandLineRunner {
 
         QuizzUser u = new QuizzUser();
         u.setEmail("recon@s6n.org");
-        u.setName("ouroumov");
-        u.setHashedPassword("lolhash");
-        u.setSalt("salthash");
+        u.setUserName("ouroumov");
+        String admin_pw = BCrypt.hashpw("lolwoot", BCrypt.gensalt(12));
+        u.setHashedPassword(admin_pw);
+        u.setRoles("ADMIN,USER");
+        u.setActive(true);
         quizzUserDAO.save(u);
 
         Quizz qz = new Quizz();
