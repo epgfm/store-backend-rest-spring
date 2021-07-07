@@ -1,16 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="js/utils.js"></script>
     <script src="js/app.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="res/favicon.ico" type="image/x-icon">
 </head>
 <body>
-<p>My content</p>
-<canvas id="myCanvas" width="1920" height="1080"></canvas>
+<header class="container-fluid text-white text-center pb-2">
+    <h1>Battle Stations</h1>
+</header>
+<main class="container">
+
+    <p>My content</p>
+    <p th:if="${principal} != null" th:text="'Hello, ' + ${principal.name} + '!'"></p>
+
+</main>
+<footer class="container-fluid text-white text-center">
+    &copy; 2020 epgfm
+</footer>
 </body>
 </html>

@@ -1,9 +1,6 @@
 package a84.storebackendrestspring.m.objects;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class QuizzUser {
@@ -12,6 +9,7 @@ public class QuizzUser {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
     private int accessLevel;
+    @Column(unique = true)
     private String userName;
     private String email;
     private String hashedPassword;

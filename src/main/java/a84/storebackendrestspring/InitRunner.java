@@ -28,12 +28,25 @@ public class InitRunner implements CommandLineRunner {
 
     public void run(String[] args) {
 
+        // This needs to be run only once in the begining so if any user
+        // exists we want to exit immediately
+        if (quizzUserDAO.findAll().size() > 0) {
+            return;
+        }
+
         QuizzUser u = new QuizzUser();
         u.setEmail("recon@s6n.org");
         u.setUserName("ouroumov");
-        String admin_pw = BCrypt.hashpw("lolwoot", BCrypt.gensalt(12));
-        u.setHashedPassword(admin_pw);
+        String pw = BCrypt.hashpw("lolwoot", BCrypt.gensalt(12));
+        u.setHashedPassword(pw);
         u.setRoles("ADMIN,USER");
+        u.setActive(true);
+        quizzUserDAO.save(u);
+        u = new QuizzUser();
+        u.setUserName("luser");
+        pw = BCrypt.hashpw("lolwhat", BCrypt.gensalt(12));
+        u.setHashedPassword(pw);
+        u.setRoles("USER");
         u.setActive(true);
         quizzUserDAO.save(u);
 

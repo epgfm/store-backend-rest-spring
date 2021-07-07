@@ -1,0 +1,9 @@
+header, footer {
+    background-color: coral;
+}
+
+main {
+    min-height: 120px;
+    background-color: #ecf2f9;
+    text-align: center;
+}
